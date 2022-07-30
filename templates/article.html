@@ -12,9 +12,11 @@
             <img src="http://www.gamingfortheweekend.com/wp-content/uploads/2017/08/News-Banner.png" class="img-fluid" alt="News-Banner">
         </Header> -->
         <div class="d-flex flex-column align-items-center" style="margin-top: 24px;">
-            <Header>
-                DN News
-            </Header>
+            <a id='homeButton' href="{{ url_for('page', key='All') }}">
+                <Header>
+                    DN News
+                </Header>
+            </a>
             <span class='BorderBottom'></span>
             <div class="ArticleHead d-flex flex-column align-items-center">
                 <div class="Title">

@@ -12,9 +12,11 @@
             <img src="{{ url_for('static', filename='images/News-Banner-min.jpg') }}" class="img-fluid" alt="News-Banner">
         </Header> -->
         <div class="d-flex flex-column align-items-center" style="margin-top: 24px;">
-          <Header>
-            DN News
-          </Header>
+          <a id='homeButton' href="{{ url_for('page', key='All') }}">
+            <Header>
+              DN News
+            </Header>
+          </a>
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
