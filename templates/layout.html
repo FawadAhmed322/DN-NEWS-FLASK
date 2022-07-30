@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ title }}: DN-News</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+        <title>{% block title %}{% endblock %}: DN-News</title>
     </head>
     <body>
+        <!-- <Header>
+            <img src="{{ url_for('static', filename='images/News-Banner-min.jpg') }}" class="img-fluid" alt="News-Banner">
+        </Header> -->
+        <div class="d-flex flex-column align-items-center" style="margin-top: 24px;">
+          <Header>
+            DN News
+          </Header>
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    {% block nav %}{% endblock %}
+                </div>
+              </div>
+            </div>
+          </nav>
+          <span class='BorderBottom'></span>
+        </div>
+        
         {% block content %}{% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     </body>
 </html>
